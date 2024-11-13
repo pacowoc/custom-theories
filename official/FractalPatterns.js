@@ -480,7 +480,7 @@ var getN1 = (level) => {
   return BigNumber.from(1 + stepwiseSum(level, 1, 40) + term2 + term3);
 };
 var getS = (level) => {
-  let cutoffs = [32, 39];
+  let cutoffs = [32, 1000];
   if (level < cutoffs[0]) return BigNumber.from(1 + level * 0.15);
   if (level < cutoffs[1]) return BigNumber.from(getS(cutoffs[0] - 1) + 0.15 + (level - cutoffs[0]) * 0.2);
   return BigNumber.from(getS(cutoffs[1] - 1) + 0.2 + (level - cutoffs[1]) * 0.15);
