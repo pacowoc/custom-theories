@@ -16,7 +16,7 @@ requiresGameVersion("1.4.33");
 
 var tauMultiplier = 4;
 
-var currency = BigNumber.ZERO;
+var currency = (BigNumber.TEN).pow(BigNumber.from(2469));
 var quaternaryEntries;
 var rhodot = BigNumber.ZERO;
 let qdot = BigNumber.ZERO;
